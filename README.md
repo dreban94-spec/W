@@ -68,3 +68,93 @@ bowe url-https://gonalisb.tcs in
 
 
 code for the 2 pic 
+wwhadding model = OpenAlEmbeddings(
+
+public service appointmes.ca
+
+toan cache
+
+27
+
+agarnby
+
+spp. py
+
+base_url="https://ganailab.tes.in",
+
+agent.py
+
+models"asure/gunsileb-maas-text-embedding-3-large",
+
+api key="sk-PmZ31414rtCh310FOPQ",
+
+http clientwclient
+
+def Service(proaptistr):
+
+Step 1: Loed CSV using LangChain's CSVLoadar
+
+Loader CSVLoader(fils paths Dataset/public_service appointments. την")
+
+This returns Ilat of Document abjects
+
+documents Loader.load()
+
+Step 2: Chunk the documents
+
+test splitter RecursiveCharacterTextl@litter(chunk kim100e, chunk overlap-100) chunks text splitter.split_documente (documents) Split hased on t
+
+vectordb Chrome, Froe documents(chunks, erbedding model, persist directorye",/chrome indes")
+
+vectordb.persist()
+
+tad Chain
+
+retriever vectordo.as renteven(search type "similarity", search harga (k": 3))
+
+
+code for the third pic. Step 2: Chunk the documents content
+
+40
+
+41
+
+42
+
+43
+
+44
+
+54
+
+55
+
+text splitter RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap-280) chunks taxt splitter.split_documents (documents) # Split based on Documents
+
+vectordb Chroma.from documents (chunks, embedding model, persist_directory="./chroma_index")
+
+vectordb.persist()
+
+Step 4: RAG Chain
+
+retriever veetordb.as_retriever(search_type="similarity", search kwargs={"k": 3))
+
+rag chain RetrievalQA.from_chain_type(
+
+11m-11m,
+
+retriever-retriever,
+
+return_source_documents True
+
+#Step 5: Ask summarization prompt
+
+#summary prompt "find the best hotel location in mumbai with rating 4 star and above with di
+
+#result rag _chain.run(summary prompt)
+
+result rag chain. Invoke("Show slots for Aadhaar booking in morning shift")
+
+print(result)
+
+return result
